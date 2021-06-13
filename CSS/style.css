@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+*{
+ padding:0;
+ margin:0;
+}
+
+html,body{
+  background-size: cover;
+  background:#fffaa8;
+}
+
+.p5Canvas{
+    margin: 250px;
+    box-shadow:  41px 41px 100px #523232, -41px -41px 100px #ffcaca;
+    /* border: 2px linear-gradient(90deg, #ffaaaa 0%, #ff8989 30%, #f75f5f 60%, #f33e3e 90%, #ff0000 90%); */
+    border-radius: 40px;
+}
+
+.button{
+  cursor: pointer;
+  padding : 10px;
+  border-radius: 60px;
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: large;
+  font-weight: bold;
+  box-shadow:  41px 41px 100px #523232, -41px -41px 100px #ffcaca;
+  background: linear-gradient(90deg, #ffaaaa 0%, #ff8989 30%, #f75f5f 60%, #f33e3e 90%, #ff0000 90%);
+}
+
+.button:hover{
+  animation: gradient 2.5s infinite 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) forwards;
+}
+
+@keyframes gradient {
+  0% { background: linear-gradient(90deg, #87e8fe 0%, #6f7bfe 100%) }
+  10% { background: linear-gradient(90deg, #e87fa2 0%, #f7d58b 100%) }
+  20% { background: linear-gradient(90deg, #FDBB2D 0%, #7b4dd0 100%) }
+  30% { background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%) }
+  40% { background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%) }
+  50% { background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%) }
+  60% { background: linear-gradient(90deg, #79ed62 0%, #00ff88 100%) }
+  70% { background: linear-gradient(90deg, #6c51e6 0%, #A8C0FF 100%) }
+  80% { background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%) }
+  90% { background: linear-gradient(90deg, #4b6cb7 0%, #6a94e8 100%) }
+  100% { background: linear-gradient(90deg, #00d2ff 0%, #6571f4 100%) }
+}
