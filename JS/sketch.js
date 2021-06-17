@@ -10,8 +10,8 @@ var p;
 
 
 function preload() {
-  sadDog = loadImage("IMAGES/Dog.png");
-  happyDog = loadImage("IMAGES/happy dog.png");
+  sadDog = loadAnimation("IMAGES/Dog.png");
+  happyDog = loadAnimation("IMAGES/happy dog.png");
 }
 
 function setup() {
@@ -26,7 +26,8 @@ function setup() {
   foodStock.on("value", readStock);
 
   dog = createSprite(800, 200, 150, 150);
-  dog.addImage(sadDog);
+  dog.addAnimation("sadDog", sadDog);
+  dog.addAnimation("happyDog", happyDog);
   dog.scale = 0.15;
 
   changeBG = createButton("Change Background Colour");
@@ -108,6 +109,7 @@ function feedDog() {
   }).then((result) => {
     if (result.isConfirmed) {
       //dog.addImage(happyDog);
+      dog.changeAnimation("happyDog", happyDog);
 
       foodObj.updateFoodStock(foodObj.getFoodStock() - 1);
       database.ref('Project36/Number_of_Food').update({
